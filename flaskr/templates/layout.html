@@ -1,0 +1,71 @@
+{#<!doctype html>#}
+
+
+<title>BKHN</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+
+
+<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+
+
+<script type="text/javascript" src="{{ url_for('static', filename='d3/d3.min.js') }}"></script>
+
+
+<script src="{{ url_for('static', filename='js/jquery-3.1.1.js') }}"></script>
+<script src="{{ url_for('static', filename='d3/d3.v3.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/d3.tip.v0.6.3.js') }}"></script>
+
+
+{#    Date picker#}
+<script src="{{ url_for('static', filename='js/bootstrap-datetimepicker.min.js') }}"></script>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap-datetimepicker.min.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap-combined.min.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap-combined.min.css') }}">
+
+
+
+{#<script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.1.1.js') }}"></script>#}
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+{#  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>#}
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<div class="container" align="center">
+
+
+    <h3>HỆ THỐNG QUẢN LÝ NGƯỜI QUA LẠI BKHN</h3>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Home</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="{{ url_for('visit_return') }}">Visit and Return</a></li>
+                <li><a href="{{ url_for('duration') }}">Duration</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    {#    <div class="metanav">
+
+        <button type="button" class="bt">Login</button>
+        {% if not session.logged_in %}
+            <a href="{{ url_for('login') }}">
+                <button type="button" class="btn btn-primary">Login</button>
+            </a>
+        {% else %}
+            <a href="{{ url_for('logout') }}">log out</a>
+        {% endif %}
+    </div>
+    {% for message in get_flashed_messages() %}
+        <div class="flash">{{ message }}</div>
+    {% endfor %}
+    {% block body %}{% endblock %}
+
+</div>#}
+
+    {% block content %}{% endblock %}
+
+</div>
